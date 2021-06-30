@@ -35,9 +35,8 @@ namespace dotnet_di_connstring
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "dotnet_di_connstring", Version = "v1" });
             });
-            Console.WriteLine("Create transient...");
 
-            //http://rion.io/2016/01/04/accessing-identity-info-using-dependency-injection-in-net-5/
+            Console.WriteLine("Do some dependency injection...");
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<HelperResolverService, HelperResolverService>();
             services.AddTransient<IRepository, MyRepository>();
